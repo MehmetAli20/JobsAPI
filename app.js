@@ -37,7 +37,9 @@ const errorHandlerMiddleware = require('./middleware/error-handler');
 
 // extra packages
 
-
+app.get('/', (req, res) => {
+  res.send('<h1>Jobs API</h1><a href="/api/v1/jobs">Documentation</a>');
+});
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
